@@ -135,6 +135,7 @@ tbody tr.selected { background: rgba(76, 141, 255, 0.14); }
 }
 .up { color: var(--up); }
 .down { color: var(--down); }
+.rank-badge { color: var(--muted); margin-right: 6px; font-variant-numeric: tabular-nums; }
 
 /* ---- Detail panel ---- */
 .period-toggle { display: flex; gap: 4px; background: var(--panel-2); padding: 3px; border-radius: 999px; }
@@ -180,28 +181,49 @@ html, body { max-width: 100%; overflow-x: hidden; }
   .search { width: 160px; }
 }
 
-/* iPhone 寬度（約 ≤430px）：縮小字級/間距、隱藏次要欄位、表格只在框內捲動 */
+/* iPhone 寬度（≤600px）：字維持原大小，每列改「兩行卡片」排版，不再左右滑 */
 @media (max-width: 600px) {
-  :root { font-size: 14px; }
   .topbar { padding: 12px 14px; gap: 10px; }
-  .topbar h1 { font-size: 18px; }
   .topbar-right { width: 100%; justify-content: space-between; }
   .search { width: 100%; order: 3; }
   .updated { display: none; }
-  .cta { padding: 8px 12px; font-size: 13px; }
 
   .kpis { padding: 14px 14px 0; gap: 10px; }
-  .kpi { padding: 12px 14px; }
-  .kpi .value { font-size: 20px; }
-
   .chips, .layout { padding-left: 14px; padding-right: 14px; }
-
-  th, td { padding: 9px 10px; font-size: 13px; }
-  /* 次要欄位在手機隱藏，避免左右滑動 */
   .col-hide-sm { display: none; }
 
-  .detail-stats { grid-template-columns: 1fr 1fr; }
-  .chart-wrap { height: 260px; padding: 10px 12px 14px; }
+  /* 表格 → 卡片：隱藏表頭，每列縱向堆疊 */
+  table thead { display: none; }
+  table, tbody, tr, td { display: block; }
+  tbody tr {
+    padding: 12px 14px;
+    border-top: 1px solid var(--border);
+  }
+  td { padding: 0; border: none; }
+  /* 第一行：名稱（佔整行、可換行、維持原字級） */
+  td.cell-name {
+    font-weight: 600;
+    margin-bottom: 8px;
+    white-space: normal;
+    line-height: 1.45;
+  }
+  td.cell-name .rank-badge { color: var(--muted); margin-right: 6px; }
+  /* 第二行：各數字並排，前面帶小標籤 */
+  td.num {
+    display: inline-block;
+    text-align: left;
+    margin-right: 18px;
+  }
+  td.num::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 400;
+  }
+  td.cell-flag { display: inline-block; margin-top: 8px; }
 
+  .detail-stats { grid-template-columns: 1fr 1fr 1fr; }
+  .chart-wrap { height: 260px; padding: 10px 12px 14px; }
   .foot { padding: 14px 14px 24px; }
 }

@@ -78,11 +78,11 @@
     $("#fund-tbody").innerHTML = rows
       .map((f) => `
         <tr data-code="${f.code}" class="${f.code === selectedCode ? "selected" : ""}">
-          <td>${f.name}</td>
+          <td class="cell-name">${f.name}</td>
           <td class="col-hide-sm"><span class="cat-tag">${f.category}</span></td>
-          <td class="num ${cls(f.r1m)}">${fmtPct(f.r1m)}</td>
-          <td class="num ${cls(f.r3m)}">${fmtPct(f.r3m)}</td>
-          <td class="num ${cls(f.r1y)}">${fmtPct(f.r1y)}</td>
+          <td class="num ${cls(f.r1m)}" data-label="近1月">${fmtPct(f.r1m)}</td>
+          <td class="num ${cls(f.r3m)}" data-label="近3月">${fmtPct(f.r3m)}</td>
+          <td class="num ${cls(f.r1y)}" data-label="近1年">${fmtPct(f.r1y)}</td>
         </tr>`)
       .join("") || '<tr><td colspan="5" style="padding:20px;color:var(--muted)">查無符合基金</td></tr>';
   }

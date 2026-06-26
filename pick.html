@@ -57,7 +57,7 @@
     <h2 class="sec">✅ 通過雙重篩選的基金</h2>
     <div class="panel"><div class="table-wrap"><table>
       <thead><tr>
-        <th>排名</th><th>基金名稱</th><th class="col-hide-sm">基金公司</th>
+        <th>基金名稱</th><th class="col-hide-sm">基金公司</th>
         <th class="num">近1月</th><th class="num">近3月</th><th class="num">超額(贏大盤)</th>
       </tr></thead>
       <tbody id="picks-tbody"></tbody>
@@ -123,19 +123,20 @@
       // 通過清單
       document.getElementById("picks-tbody").innerHTML = picks.map((p) => `
         <tr>
-          <td>${p.rank}</td><td>${p.name}</td><td class="col-hide-sm">${p.company}</td>
-          <td class="num ${cls(p.r1m)}">${fmtPct(p.r1m)}</td>
-          <td class="num ${cls(p.r3m)}">${fmtPct(p.r3m)}</td>
-          <td class="num ${cls(p.excess)}">${fmtPct(p.excess)}</td>
+          <td class="cell-name"><span class="rank-badge">${p.rank}.</span>${p.name}</td>
+          <td class="col-hide-sm">${p.company}</td>
+          <td class="num ${cls(p.r1m)}" data-label="近1月">${fmtPct(p.r1m)}</td>
+          <td class="num ${cls(p.r3m)}" data-label="近3月">${fmtPct(p.r3m)}</td>
+          <td class="num ${cls(p.excess)}" data-label="超額">${fmtPct(p.excess)}</td>
         </tr>`).join("") || `<tr><td colspan="6" class="empty">無</td></tr>`;
 
       // 前段班
       document.getElementById("third-tbody").innerHTML = (d.top_third || []).map((f) => `
         <tr>
-          <td>${f.name}</td><td class="col-hide-sm">${f.company}</td>
-          <td class="num ${cls(f.r1m)}">${fmtPct(f.r1m)}</td>
-          <td class="num ${cls(f.r3m)}">${fmtPct(f.r3m)}</td>
-          <td class="${f.beat_market ? "pass" : "fail"}">${f.beat_market ? "✅ 贏" : "✘ 輸"}</td>
+          <td class="cell-name">${f.name}</td><td class="col-hide-sm">${f.company}</td>
+          <td class="num ${cls(f.r1m)}" data-label="近1月">${fmtPct(f.r1m)}</td>
+          <td class="num ${cls(f.r3m)}" data-label="近3月">${fmtPct(f.r3m)}</td>
+          <td class="cell-flag ${f.beat_market ? "pass" : "fail"}">${f.beat_market ? "✅ 贏" : "✘ 輸"}</td>
         </tr>`).join("");
     }
   </script>
