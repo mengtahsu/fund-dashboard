@@ -52,6 +52,17 @@ body {
 }
 .search:focus { border-color: var(--accent); }
 .updated { font-size: 12px; color: var(--muted); }
+.cta {
+  background: var(--up);
+  color: #fff;
+  text-decoration: none;
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.cta:hover { filter: brightness(1.08); }
 
 /* ---- KPI cards ---- */
 .kpis {
