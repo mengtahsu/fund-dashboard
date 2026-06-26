@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>基金行情看板</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">📈</span>
+      <div>
+        <h1>基金行情看板</h1>
+        <p class="subtitle">Fund Market Dashboard</p>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <input id="search" class="search" type="search" placeholder="搜尋基金名稱…" autocomplete="off" />
+      <span class="updated">資料更新：<span id="updated-date">—</span></span>
+    </div>
+  </header>
+
+  <section class="kpis" id="kpis"><!-- KPI 卡片由 JS 產生 --></section>
+
+  <div class="chips" id="category-chips"><!-- 類別篩選 --></div>
+
+  <main class="layout">
+    <section class="panel table-panel">
+      <div class="panel-head">
+        <h2>基金排行</h2>
+        <span class="hint">點選一列查看走勢</span>
+      </div>
+      <div class="table-wrap">
+        <table id="fund-table">
+          <thead>
+            <tr>
+              <th data-sort="name">名稱</th>
+              <th data-sort="category">類別</th>
+              <th data-sort="nav" class="num">淨值</th>
+              <th data-sort="day" class="num">日漲跌</th>
+              <th data-sort="month" class="num">近一月</th>
+            </tr>
+          </thead>
+          <tbody id="fund-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel detail-panel">
+      <div class="panel-head">
+        <div>
+          <h2 id="detail-name">—</h2>
+          <span id="detail-meta" class="detail-meta"></span>
+        </div>
+        <div class="period-toggle" id="period-toggle">
+          <button data-range="22" class="active">近1月</button>
+          <button data-range="66">近3月</button>
+          <button data-range="0">全部</button>
+        </div>
+      </div>
+      <div class="detail-stats" id="detail-stats"></div>
+      <div class="chart-wrap">
+        <canvas id="nav-chart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>※ 本看板為示範用途，所有基金與淨值皆為模擬資料，非投資建議。</span>
+    <span class="convention">漲跌色：<b class="up">紅漲</b> / <b class="down">綠跌</b></span>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
