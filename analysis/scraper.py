@@ -10,10 +10,14 @@
 
 import json
 import re
+import time
 import html as ihtml
 import urllib.request
 import urllib.error
 from datetime import date, timedelta
+
+# 各分類請求之間的禮貌性延遲（秒），避免短時間內密集打 MoneyDJ
+POLITE_DELAY = 1.5
 
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"}
 
@@ -103,7 +107,9 @@ def fetch_category(code, subcat, group, pick):
 def fetch_funds():
     """抓所有設定分類，依基金代碼去重（先出現者優先）。"""
     seen, out = set(), []
-    for code, subcat, group, pick in CATEGORIES:
+    for i, (code, subcat, group, pick) in enumerate(CATEGORIES):
+        if i:
+            time.sleep(POLITE_DELAY)  # 分類之間稍歇，當個有禮貌的爬蟲
         try:
             cat_funds = fetch_category(code, subcat, group, pick)
             added = 0
