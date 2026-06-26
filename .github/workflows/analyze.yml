@@ -1,7 +1,7 @@
 name: 基金分析（抓 MoneyDJ + 選股）
 on:
   schedule:
-    - cron: "0 10 * * *"   # 台北 18:00 盤後
+    - cron: "0 14 * * *"   # 台北 18:00 盤後
   workflow_dispatch:
 permissions:
   contents: write
