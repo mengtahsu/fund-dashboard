@@ -57,7 +57,7 @@
     <h2 class="sec">✅ 通過雙重篩選的基金</h2>
     <div class="panel"><div class="table-wrap"><table>
       <thead><tr>
-        <th>排名</th><th>基金名稱</th><th>基金公司</th>
+        <th>排名</th><th>基金名稱</th><th class="col-hide-sm">基金公司</th>
         <th class="num">近1月</th><th class="num">近3月</th><th class="num">超額(贏大盤)</th>
       </tr></thead>
       <tbody id="picks-tbody"></tbody>
@@ -66,7 +66,7 @@
     <h2 class="sec">📋 近 3 月前段班（含未通過第 ② 關者）</h2>
     <div class="panel"><div class="table-wrap"><table>
       <thead><tr>
-        <th>基金名稱</th><th>基金公司</th>
+        <th>基金名稱</th><th class="col-hide-sm">基金公司</th>
         <th class="num">近1月</th><th class="num">近3月</th><th>是否贏大盤</th>
       </tr></thead>
       <tbody id="third-tbody"></tbody>
@@ -123,7 +123,7 @@
       // 通過清單
       document.getElementById("picks-tbody").innerHTML = picks.map((p) => `
         <tr>
-          <td>${p.rank}</td><td>${p.name}</td><td>${p.company}</td>
+          <td>${p.rank}</td><td>${p.name}</td><td class="col-hide-sm">${p.company}</td>
           <td class="num ${cls(p.r1m)}">${fmtPct(p.r1m)}</td>
           <td class="num ${cls(p.r3m)}">${fmtPct(p.r3m)}</td>
           <td class="num ${cls(p.excess)}">${fmtPct(p.excess)}</td>
@@ -132,7 +132,7 @@
       // 前段班
       document.getElementById("third-tbody").innerHTML = (d.top_third || []).map((f) => `
         <tr>
-          <td>${f.name}</td><td>${f.company}</td>
+          <td>${f.name}</td><td class="col-hide-sm">${f.company}</td>
           <td class="num ${cls(f.r1m)}">${fmtPct(f.r1m)}</td>
           <td class="num ${cls(f.r3m)}">${fmtPct(f.r3m)}</td>
           <td class="${f.beat_market ? "pass" : "fail"}">${f.beat_market ? "✅ 贏" : "✘ 輸"}</td>

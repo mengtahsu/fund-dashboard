@@ -13,16 +13,30 @@ from datetime import datetime, timezone, timedelta
 
 from scraper import fetch_funds, fetch_benchmark
 
-OUT = os.path.join(os.path.dirname(os.path.dirname(__file__)), "results.json")
+ROOT = os.path.dirname(os.path.dirname(__file__))
+OUT = os.path.join(ROOT, "results.json")
+FUNDS_OUT = os.path.join(ROOT, "funds.json")
+
+# 由各期報酬重建「績效指數曲線」（現在=100，往回推），給看板畫真實走勢用
+PERF_TENORS = [("r5y", "5年"), ("r3y", "3年"), ("r1y", "1年"),
+               ("r6m", "6月"), ("r3m", "3月"), ("r1m", "1月")]
 
 
-def analyze():
-    funds = fetch_funds()
-    bench = fetch_benchmark()
+def perf_series(f):
+    pts = []
+    for key, label in PERF_TENORS:
+        r = f.get(key)
+        if r is not None:
+            pts.append({"label": label + "前", "value": round(100.0 / (1 + r / 100.0), 2)})
+    pts.append({"label": "現在", "value": 100.0})
+    return pts
+
+
+def analyze(funds, bench):
     b1m = bench.get("r1m")
 
-    # 只取近 1 月與 3 月皆有數據者
-    universe = [f for f in funds if f["r1m"] is not None and f["r3m"] is not None]
+    # 選股池：僅國內股票 + 平衡（pick=True），且近 1/3 月皆有數據
+    universe = [f for f in funds if f.get("pick") and f["r1m"] is not None and f["r3m"] is not None]
     universe.sort(key=lambda f: f["r3m"], reverse=True)
     n = len(universe)
 
@@ -64,10 +78,36 @@ def analyze():
     return result
 
 
+def build_funds_json(funds):
+    """全部抓到的基金（含真實各期報酬與重建走勢），供首頁行情看板使用。"""
+    out = []
+    for f in funds:
+        if f["r1m"] is None and f["r3m"] is None:
+            continue
+        out.append({
+            "code": f["code"], "name": f["name"], "company": f["company"],
+            "category": f["category"], "group": f["group"],
+            "r1m": f["r1m"], "r3m": f["r3m"], "r6m": f["r6m"],
+            "r1y": f["r1y"], "r3y": f["r3y"], "r5y": f["r5y"],
+            "perf": perf_series(f),
+        })
+    now = datetime.now(timezone(timedelta(hours=8)))
+    return {"generated_at": now.strftime("%Y-%m-%d %H:%M"), "count": len(out), "funds": out}
+
+
 def main():
-    result = analyze()
+    funds = fetch_funds()
+    bench = fetch_benchmark()
+
+    result = analyze(funds, bench)
     with open(OUT, "w", encoding="utf-8") as fp:
         json.dump(result, fp, ensure_ascii=False, indent=2)
+
+    funds_data = build_funds_json(funds)
+    with open(FUNDS_OUT, "w", encoding="utf-8") as fp:
+        json.dump(funds_data, fp, ensure_ascii=False)
+    print(f"看板基金資料 {funds_data['count']} 檔 → {FUNDS_OUT}")
+
     picks = result["picks"]
     print(f"基金池 {result['universe_size']} 檔；前1/3 取 {result['top_third_cutoff']} 檔；"
           f"大盤近1月 {result['benchmark']['r1m']}%")

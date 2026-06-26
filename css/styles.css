@@ -171,8 +171,37 @@ tbody tr.selected { background: rgba(76, 141, 255, 0.14); }
 .convention b { font-weight: 700; }
 
 /* ---- Responsive ---- */
+html, body { max-width: 100%; overflow-x: hidden; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
 @media (max-width: 900px) {
   .kpis { grid-template-columns: repeat(2, 1fr); }
   .layout { grid-template-columns: 1fr; }
   .search { width: 160px; }
+}
+
+/* iPhone 寬度（約 ≤430px）：縮小字級/間距、隱藏次要欄位、表格只在框內捲動 */
+@media (max-width: 600px) {
+  :root { font-size: 14px; }
+  .topbar { padding: 12px 14px; gap: 10px; }
+  .topbar h1 { font-size: 18px; }
+  .topbar-right { width: 100%; justify-content: space-between; }
+  .search { width: 100%; order: 3; }
+  .updated { display: none; }
+  .cta { padding: 8px 12px; font-size: 13px; }
+
+  .kpis { padding: 14px 14px 0; gap: 10px; }
+  .kpi { padding: 12px 14px; }
+  .kpi .value { font-size: 20px; }
+
+  .chips, .layout { padding-left: 14px; padding-right: 14px; }
+
+  th, td { padding: 9px 10px; font-size: 13px; }
+  /* 次要欄位在手機隱藏，避免左右滑動 */
+  .col-hide-sm { display: none; }
+
+  .detail-stats { grid-template-columns: 1fr 1fr; }
+  .chart-wrap { height: 260px; padding: 10px 12px 14px; }
+
+  .foot { padding: 14px 14px 24px; }
 }

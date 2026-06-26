@@ -1,138 +1,108 @@
-// 基金行情看板：純前端邏輯，從 window.FUNDS 計算指標、渲染表格與走勢圖。
+// 基金行情看板：載入真實資料 funds.json（由 analysis 管線每日產生），
+// 顯示各期報酬、依群組篩選、並用「績效指數曲線」畫真實走勢。
 (function () {
   "use strict";
 
-  const funds = window.FUNDS || [];
-
-  // ---- 指標計算 ----
-  function pct(curr, prev) {
-    if (!prev) return 0;
-    return ((curr - prev) / prev) * 100;
-  }
-  // 回傳某檔基金的衍生指標
-  function metrics(f) {
-    const h = f.history;
-    const last = h[h.length - 1].value;
-    const prev = h[h.length - 2].value;
-    const monthAgo = h[Math.max(0, h.length - 23)].value; // ~22 交易日
-    return {
-      nav: last,
-      day: pct(last, prev),
-      month: pct(last, monthAgo),
-    };
-  }
-
-  const enriched = funds.map((f) => ({ ...f, m: metrics(f) }));
-
-  // ---- 狀態 ----
-  let activeCategory = "全部";
-  let sortKey = "month";
+  let funds = [];
+  let activeGroup = "全部";
+  let sortKey = "r3m";
   let sortDir = -1; // -1 由大到小
-  let selectedId = enriched.length ? enriched[0].id : null;
+  let selectedCode = null;
   let searchText = "";
-  let range = 22;
   let chart = null;
 
-  // ---- 工具 ----
-  const fmtPct = (v) => (v >= 0 ? "+" : "") + v.toFixed(2) + "%";
-  const cls = (v) => (v >= 0 ? "up" : "down");
-  const $ = (sel) => document.querySelector(sel);
+  const $ = (s) => document.querySelector(s);
+  const fmtPct = (v) => (v == null ? "—" : (v >= 0 ? "+" : "") + Number(v).toFixed(2) + "%");
+  const cls = (v) => (v == null ? "" : v >= 0 ? "up" : "down");
 
-  function visibleFunds() {
-    return enriched.filter((f) => {
-      if (activeCategory !== "全部" && f.category !== activeCategory) return false;
+  fetch("funds.json?_=" + Date.now())
+    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then((d) => {
+      funds = d.funds || [];
+      $("#fund-count").textContent = d.count != null ? d.count : funds.length;
+      $("#updated-date").textContent = d.generated_at || "—";
+      selectedCode = funds.length ? funds[0].code : null;
+      init();
+    })
+    .catch(() => {
+      $("#fund-count").textContent = "0";
+      $("#fund-tbody").innerHTML =
+        '<tr><td colspan="5" style="padding:24px;color:var(--muted)">尚無資料（funds.json 未產生）。請先在 GitHub Actions 觸發一次分析。</td></tr>';
+    });
+
+  function visible() {
+    return funds.filter((f) => {
+      if (activeGroup !== "全部" && f.group !== activeGroup) return false;
       if (searchText && !f.name.includes(searchText)) return false;
       return true;
     });
   }
 
-  // ---- KPI ----
   function renderKpis() {
-    const all = enriched;
-    const up = all.filter((f) => f.m.day > 0).length;
-    const down = all.filter((f) => f.m.day < 0).length;
-    const avg = all.reduce((s, f) => s + f.m.day, 0) / (all.length || 1);
+    const withR1m = funds.filter((f) => f.r1m != null);
+    const up = withR1m.filter((f) => f.r1m > 0).length;
+    const down = withR1m.filter((f) => f.r1m < 0).length;
+    const avg = withR1m.reduce((s, f) => s + f.r1m, 0) / (withR1m.length || 1);
     const cards = [
-      { label: "基金檔數", value: all.length, klass: "" },
-      { label: "今日平均漲跌", value: fmtPct(avg), klass: cls(avg) },
-      { label: "今日上漲", value: up + " 檔", klass: "up" },
-      { label: "今日下跌", value: down + " 檔", klass: "down" },
+      { label: "基金檔數", value: funds.length, k: "" },
+      { label: "今日平均近1月", value: fmtPct(avg), k: cls(avg) },
+      { label: "近1月上漲", value: up + " 檔", k: "up" },
+      { label: "近1月下跌", value: down + " 檔", k: "down" },
     ];
     $("#kpis").innerHTML = cards
-      .map(
-        (c) =>
-          `<div class="kpi"><div class="label">${c.label}</div><div class="value ${c.klass}">${c.value}</div></div>`
-      )
+      .map((c) => `<div class="kpi"><div class="label">${c.label}</div><div class="value ${c.k}">${c.value}</div></div>`)
       .join("");
   }
 
-  // ---- 類別篩選 ----
   function renderChips() {
-    const cats = ["全部", ...Array.from(new Set(enriched.map((f) => f.category)))];
-    $("#category-chips").innerHTML = cats
-      .map(
-        (c) =>
-          `<div class="chip ${c === activeCategory ? "active" : ""}" data-cat="${c}">${c}</div>`
-      )
+    const groups = ["全部", ...Array.from(new Set(funds.map((f) => f.group)))];
+    $("#category-chips").innerHTML = groups
+      .map((g) => `<div class="chip ${g === activeGroup ? "active" : ""}" data-g="${g}">${g}</div>`)
       .join("");
   }
 
-  // ---- 表格 ----
+  function cmp(a, b) {
+    const av = a[sortKey], bv = b[sortKey];
+    if (sortKey === "name" || sortKey === "category") {
+      return av < bv ? sortDir : av > bv ? -sortDir : 0;
+    }
+    // 數字：null 永遠墊底
+    if (av == null && bv == null) return 0;
+    if (av == null) return 1;
+    if (bv == null) return -1;
+    return (av - bv) * sortDir;
+  }
+
   function renderTable() {
-    const rows = visibleFunds().slice().sort((a, b) => {
-      let av, bv;
-      if (sortKey === "name" || sortKey === "category") {
-        av = a[sortKey];
-        bv = b[sortKey];
-        return av < bv ? sortDir : av > bv ? -sortDir : 0;
-      }
-      av = sortKey === "nav" ? a.m.nav : a.m[sortKey];
-      bv = sortKey === "nav" ? b.m.nav : b.m[sortKey];
-      return (av - bv) * sortDir;
-    });
-
+    const rows = visible().slice().sort(cmp);
     $("#fund-tbody").innerHTML = rows
-      .map(
-        (f) => `
-      <tr data-id="${f.id}" class="${f.id === selectedId ? "selected" : ""}">
-        <td>${f.name}</td>
-        <td><span class="cat-tag">${f.category}</span></td>
-        <td class="num">${f.m.nav.toFixed(2)}</td>
-        <td class="num ${cls(f.m.day)}">${fmtPct(f.m.day)}</td>
-        <td class="num ${cls(f.m.month)}">${fmtPct(f.m.month)}</td>
-      </tr>`
-      )
-      .join("");
+      .map((f) => `
+        <tr data-code="${f.code}" class="${f.code === selectedCode ? "selected" : ""}">
+          <td>${f.name}</td>
+          <td class="col-hide-sm"><span class="cat-tag">${f.category}</span></td>
+          <td class="num ${cls(f.r1m)}">${fmtPct(f.r1m)}</td>
+          <td class="num ${cls(f.r3m)}">${fmtPct(f.r3m)}</td>
+          <td class="num ${cls(f.r1y)}">${fmtPct(f.r1y)}</td>
+        </tr>`)
+      .join("") || '<tr><td colspan="5" style="padding:20px;color:var(--muted)">查無符合基金</td></tr>';
   }
 
-  // ---- 明細與走勢圖 ----
   function renderDetail() {
-    const f = enriched.find((x) => x.id === selectedId);
+    const f = funds.find((x) => x.code === selectedCode);
     if (!f) return;
     $("#detail-name").textContent = f.name;
-    $("#detail-meta").textContent = `${f.category} · ${f.currency} · 淨值幣別`;
-
-    const h = f.history;
-    const slice = range > 0 ? h.slice(Math.max(0, h.length - range - 1)) : h;
-    const first = slice[0].value;
-    const last = slice[slice.length - 1].value;
-    const rangePct = pct(last, first);
-    const hi = Math.max(...slice.map((p) => p.value));
-    const lo = Math.min(...slice.map((p) => p.value));
+    $("#detail-meta").textContent = `${f.group} · ${f.category} · ${f.company}`;
 
     const stats = [
-      { label: "最新淨值", value: last.toFixed(2), klass: "" },
-      { label: "區間漲跌", value: fmtPct(rangePct), klass: cls(rangePct) },
-      { label: "區間高/低", value: `${hi.toFixed(2)} / ${lo.toFixed(2)}`, klass: "" },
+      { label: "近1月", v: f.r1m },
+      { label: "近3月", v: f.r3m },
+      { label: "近1年", v: f.r1y },
     ];
     $("#detail-stats").innerHTML = stats
-      .map(
-        (s) =>
-          `<div class="stat"><div class="label">${s.label}</div><div class="value ${s.klass}">${s.value}</div></div>`
-      )
+      .map((s) => `<div class="stat"><div class="label">${s.label}</div><div class="value ${cls(s.v)}">${fmtPct(s.v)}</div></div>`)
       .join("");
 
-    drawChart(slice, rangePct >= 0);
+    drawChart(f.perf || [], (f.r3m == null ? 0 : f.r3m) >= 0);
   }
 
   function drawChart(series, isUp) {
@@ -143,95 +113,53 @@
     grad.addColorStop(1, "rgba(0,0,0,0)");
 
     const data = {
-      labels: series.map((p) => p.date),
-      datasets: [
-        {
-          data: series.map((p) => p.value),
-          borderColor: color,
-          backgroundColor: grad,
-          borderWidth: 2,
-          pointRadius: 0,
-          tension: 0.25,
-          fill: true,
-        },
-      ],
+      labels: series.map((p) => p.label),
+      datasets: [{
+        data: series.map((p) => p.value),
+        borderColor: color, backgroundColor: grad,
+        borderWidth: 2, pointRadius: 3, tension: 0.25, fill: true,
+      }],
     };
     const options = {
-      responsive: true,
-      maintainAspectRatio: false,
+      responsive: true, maintainAspectRatio: false,
       plugins: { legend: { display: false }, tooltip: { mode: "index", intersect: false } },
       scales: {
-        x: { ticks: { color: "#8b97a8", maxTicksLimit: 6 }, grid: { display: false } },
+        x: { ticks: { color: "#8b97a8" }, grid: { display: false } },
         y: { ticks: { color: "#8b97a8" }, grid: { color: "rgba(40,49,66,0.6)" } },
       },
     };
-    if (chart) {
-      chart.data = data;
-      chart.options = options;
-      chart.update();
-    } else {
-      chart = new Chart(ctx, { type: "line", data, options });
-    }
+    if (chart) { chart.data = data; chart.options = options; chart.update(); }
+    else chart = new Chart(ctx, { type: "line", data, options });
   }
 
-  // ---- 事件 ----
   function bind() {
     $("#category-chips").addEventListener("click", (e) => {
-      const chip = e.target.closest(".chip");
-      if (!chip) return;
-      activeCategory = chip.dataset.cat;
-      renderChips();
-      renderTable();
+      const c = e.target.closest(".chip");
+      if (!c) return;
+      activeGroup = c.dataset.g;
+      renderChips(); renderTable();
     });
-
     $("#fund-tbody").addEventListener("click", (e) => {
       const tr = e.target.closest("tr");
-      if (!tr) return;
-      selectedId = tr.dataset.id;
-      renderTable();
-      renderDetail();
+      if (!tr || !tr.dataset.code) return;
+      selectedCode = tr.dataset.code;
+      renderTable(); renderDetail();
     });
-
     document.querySelectorAll("#fund-table th").forEach((th) => {
       th.addEventListener("click", () => {
-        const key = th.dataset.sort;
-        if (sortKey === key) sortDir *= -1;
-        else {
-          sortKey = key;
-          sortDir = key === "name" || key === "category" ? 1 : -1;
-        }
+        const k = th.dataset.sort;
+        if (sortKey === k) sortDir *= -1;
+        else { sortKey = k; sortDir = (k === "name" || k === "category") ? 1 : -1; }
         renderTable();
       });
     });
-
-    $("#period-toggle").addEventListener("click", (e) => {
-      const btn = e.target.closest("button");
-      if (!btn) return;
-      range = parseInt(btn.dataset.range, 10);
-      document.querySelectorAll("#period-toggle button").forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      renderDetail();
-    });
-
     $("#search").addEventListener("input", (e) => {
       searchText = e.target.value.trim();
       renderTable();
     });
   }
 
-  // ---- 初始化 ----
   function init() {
-    if (!funds.length) {
-      document.body.insertAdjacentHTML("beforeend", "<p style='padding:24px'>無基金資料</p>");
-      return;
-    }
-    $("#updated-date").textContent = window.DATA_UPDATED || "—";
-    renderKpis();
-    renderChips();
-    renderTable();
-    renderDetail();
-    bind();
+    renderKpis(); renderChips(); renderTable(); renderDetail(); bind();
   }
-
-  init();
 })();

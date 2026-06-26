@@ -17,12 +17,27 @@ from datetime import date, timedelta
 
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"}
 
-# 基金分類 → MoneyDJ 排行頁。可自行擴充更多分類代碼（A/B 參數）。
-# 註：MoneyDJ 分類選單由 JS 動態載入，完整代碼需逐一確認；先納入已驗證的端點。
-CATEGORIES = {
-    "國內股票型": "https://www.moneydj.com/funddj/ya/yp401000.djhtm?A=ET001001&B=806",
-    # "平衡型": "https://www.moneydj.com/funddj/ya/yp40X000.djhtm?A=...&B=...",  # TODO 待確認代碼
-}
+# MoneyDJ 國內基金分類代碼（A=ET00X00Y）。實測對應如下。
+# 每筆：(代碼, 子分類名, 大類, 是否納入選股池)
+#   pick=True 者用於「今日選基金」（國內股票 + 國內平衡，與 TAIEX 比較才公平）；
+#   其餘僅用於首頁行情看板的廣度。
+RANK_URL = "https://www.moneydj.com/funddj/ya/yp401000.djhtm?A={code}&B=806"
+CATEGORIES = [
+    # 國內股票型 ET001*
+    ("ET001001", "科技類",   "國內股票", True),
+    ("ET001004", "中小型",   "國內股票", True),
+    ("ET001005", "一般股票", "國內股票", True),
+    ("ET001006", "中國大陸", "國內股票", True),
+    ("ET001007", "高股息",   "國內股票", True),
+    ("ET001008", "上櫃店頭", "國內股票", True),
+    ("ET001010", "主動式ETF", "國內股票", True),
+    # 平衡型 ET004*
+    ("ET004001", "國內平衡", "平衡型",   True),
+    ("ET004002", "平衡王",   "平衡型",   True),
+    # 跨區平衡與多重資產屬跨國/全球，與「台股抄底」情境不符，僅供看板廣度，不納入選股池
+    ("ET004003", "跨區平衡", "跨區平衡", False),
+    ("ET004005", "多重資產", "多重資產", False),
+]
 
 
 def _fetch(url, encoding="big5"):
@@ -48,9 +63,13 @@ def _num(s):
         return None
 
 
-def fetch_category(name, url):
-    """回傳該分類的基金清單：[{code,name,company,nav_date,r1m,r3m,r6m,r1y,category}, ...]"""
-    html = _fetch(url)
+def _g(tds, i):
+    return _num(tds[i]) if len(tds) > i else None
+
+
+def fetch_category(code, subcat, group, pick):
+    """回傳該分類的基金清單。"""
+    html = _fetch(RANK_URL.format(code=code))
     funds = []
     for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", html, re.I | re.S):
         if "yp010000.djhtm" not in tr:
@@ -60,7 +79,7 @@ def fetch_category(name, url):
             ihtml.unescape(re.sub(r"<[^>]+>", "", c)).strip()
             for c in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.I | re.S)
         ]
-        # 欄位：排名,基金名稱,基金公司,淨值日期,一個月,三個月,六個月,一年,...
+        # 欄位：排名,基金名稱,基金公司,淨值日期,一個月,三個月,六個月,一年,三年,五年
         if len(tds) < 6 or not code_m:
             continue
         funds.append({
@@ -68,27 +87,35 @@ def fetch_category(name, url):
             "name": tds[1],
             "company": tds[2],
             "nav_date": tds[3],
-            "r1m": _num(tds[4]),
-            "r3m": _num(tds[5]),
-            "r6m": _num(tds[6]) if len(tds) > 6 else None,
-            "r1y": _num(tds[7]) if len(tds) > 7 else None,
-            "category": name,
+            "r1m": _g(tds, 4),
+            "r3m": _g(tds, 5),
+            "r6m": _g(tds, 6),
+            "r1y": _g(tds, 7),
+            "r3y": _g(tds, 8),
+            "r5y": _g(tds, 9),
+            "category": subcat,
+            "group": group,
+            "pick": pick,
         })
     return funds
 
 
 def fetch_funds():
-    """抓所有設定分類，依基金代碼去重。"""
+    """抓所有設定分類，依基金代碼去重（先出現者優先）。"""
     seen, out = set(), []
-    for name, url in CATEGORIES.items():
+    for code, subcat, group, pick in CATEGORIES:
         try:
-            for f in fetch_category(name, url):
+            cat_funds = fetch_category(code, subcat, group, pick)
+            added = 0
+            for f in cat_funds:
                 if f["code"] in seen:
                     continue
                 seen.add(f["code"])
                 out.append(f)
+                added += 1
+            print(f"  {code} {group}/{subcat}: {added} 檔")
         except Exception as e:  # 單一分類失敗不影響其他
-            print(f"[warn] 分類 {name} 抓取失敗: {e}")
+            print(f"[warn] 分類 {code} 抓取失敗: {e}")
     return out
 
 
