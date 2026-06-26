@@ -1,0 +1,31 @@
+name: 基金分析（抓 MoneyDJ + 選股）
+on:
+  schedule:
+    - cron: "0 10 * * *"   # 台北 18:00 盤後
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: analyze
+  cancel-in-progress: false
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 執行抓取與分析
+        run: python analysis/analyze.py
+      - name: 提交結果（若有變動）
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain results.json)" ]; then
+            git add results.json
+            git commit -m "chore: 更新基金分析結果 $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          else
+            echo "結果無變動，略過提交。"
+          fi
