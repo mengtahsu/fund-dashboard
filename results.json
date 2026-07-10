@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-10 00:27",
+  "generated_at": "2026-07-11 00:24",
   "benchmark": {
-    "r1m": 5.13,
-    "r3m": 31.57,
-    "as_of": "2026-07-08"
+    "r1m": 1.45,
+    "r3m": 30.1,
+    "as_of": "2026-07-09"
   },
   "benchmark_missing": false,
   "universe_size": 257,
@@ -29,7 +29,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 9.37,
+      "excess": 13.05,
       "rank": 1
     },
     {
@@ -46,7 +46,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 8.41,
+      "excess": 12.09,
       "rank": 2
     },
     {
@@ -63,7 +63,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 8.37,
+      "excess": 12.05,
       "rank": 3
     },
     {
@@ -80,7 +80,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 8.36,
+      "excess": 12.04,
       "rank": 4
     },
     {
@@ -97,8 +97,229 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 8.36,
+      "excess": 12.04,
       "rank": 5
+    },
+    {
+      "code": "ACTS114",
+      "name": "新光臺灣高股息基金A不配息(台幣)",
+      "company": "台新投信",
+      "nav_date": "07/09",
+      "r1m": 4.37,
+      "r3m": 42.48,
+      "r6m": 82.98,
+      "r1y": 104.82,
+      "r3y": 147.47,
+      "r5y": null,
+      "category": "一般股票",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 2.92,
+      "rank": 6
+    },
+    {
+      "code": "ACTS115",
+      "name": "新光臺灣高股息基金B月配息(台幣)(本基金並無保證收益及配息)",
+      "company": "台新投信",
+      "nav_date": "07/09",
+      "r1m": 3.94,
+      "r3m": 41.89,
+      "r6m": 82.18,
+      "r1y": 102.95,
+      "r3y": 143.44,
+      "r5y": null,
+      "category": "一般股票",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 2.49,
+      "rank": 7
+    },
+    {
+      "code": "ACYT09",
+      "name": "元大高科技基金",
+      "company": "元大投信",
+      "nav_date": "07/09",
+      "r1m": 3.82,
+      "r3m": 42.95,
+      "r6m": 97.15,
+      "r1y": 224.0,
+      "r3y": 299.17,
+      "r5y": 244.6,
+      "category": "科技類",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 2.37,
+      "rank": 8
+    },
+    {
+      "code": "ACYT03",
+      "name": "元大多多基金",
+      "company": "元大投信",
+      "nav_date": "07/09",
+      "r1m": 3.69,
+      "r3m": 44.7,
+      "r6m": 110.65,
+      "r1y": 240.07,
+      "r3y": 332.63,
+      "r5y": 314.5,
+      "category": "一般股票",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 2.24,
+      "rank": 9
+    },
+    {
+      "code": "ACNB01",
+      "name": "路博邁台灣5G股票基金T累積型(基金之配息來源可能為本金)",
+      "company": "路博邁投信",
+      "nav_date": "07/09",
+      "r1m": 3.4,
+      "r3m": 43.68,
+      "r6m": 99.33,
+      "r1y": 225.48,
+      "r3y": 450.0,
+      "r5y": 622.44,
+      "category": "一般股票",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 1.95,
+      "rank": 10
+    },
+    {
+      "code": "ACNB46",
+      "name": "路博邁台灣5G股票基金N月配型(基金之配息來源可能為本金)",
+      "company": "路博邁投信",
+      "nav_date": "07/09",
+      "r1m": 3.4,
+      "r3m": 43.67,
+      "r6m": 99.29,
+      "r1y": 225.4,
+      "r3y": 449.71,
+      "r5y": 621.69,
+      "category": "一般股票",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 1.95,
+      "rank": 11
+    },
+    {
+      "code": "ACNB02",
+      "name": "路博邁台灣5G股票基金T月配型(基金之配息來源可能為本金)",
+      "company": "路博邁投信",
+      "nav_date": "07/09",
+      "r1m": 3.39,
+      "r3m": 43.69,
+      "r6m": 99.31,
+      "r1y": 225.37,
+      "r3y": 449.77,
+      "r5y": 622.2,
+      "category": "一般股票",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 1.94,
+      "rank": 12
+    },
+    {
+      "code": "ACNB45",
+      "name": "路博邁台灣5G股票基金N累積型(基金之配息來源可能為本金)",
+      "company": "路博邁投信",
+      "nav_date": "07/09",
+      "r1m": 3.39,
+      "r3m": 43.66,
+      "r6m": 99.31,
+      "r1y": 225.47,
+      "r3y": 449.84,
+      "r5y": 631.68,
+      "category": "一般股票",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 1.94,
+      "rank": 13
+    },
+    {
+      "code": "ACFH120",
+      "name": "復華全方位基金TISA類型",
+      "company": "復華投信",
+      "nav_date": "07/09",
+      "r1m": 2.15,
+      "r3m": 47.28,
+      "r6m": 96.05,
+      "r1y": null,
+      "r3y": null,
+      "r5y": null,
+      "category": "一般股票",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 0.7,
+      "rank": 14
+    },
+    {
+      "code": "ACFH15",
+      "name": "復華全方位基金A類型",
+      "company": "復華投信",
+      "nav_date": "07/09",
+      "r1m": 2.07,
+      "r3m": 46.98,
+      "r6m": 95.2,
+      "r1y": 193.92,
+      "r3y": 292.39,
+      "r5y": 268.79,
+      "category": "一般股票",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 0.62,
+      "rank": 15
+    },
+    {
+      "code": "ACCA318",
+      "name": "群益台灣精選強棒主動式ETF基金(本基金之配息來源可能為收益平準金)",
+      "company": "群益投信",
+      "nav_date": "07/09",
+      "r1m": 1.61,
+      "r3m": 39.95,
+      "r6m": 70.98,
+      "r1y": 138.06,
+      "r3y": null,
+      "r5y": null,
+      "category": "主動式ETF",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 0.16,
+      "rank": 16
+    },
+    {
+      "code": "ACYT11",
+      "name": "元大新主流基金",
+      "company": "元大投信",
+      "nav_date": "07/09",
+      "r1m": 1.57,
+      "r3m": 30.72,
+      "r6m": 115.95,
+      "r1y": 249.8,
+      "r3y": 323.65,
+      "r5y": 337.17,
+      "category": "一般股票",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 0.12,
+      "rank": 17
+    },
+    {
+      "code": "ACPS03",
+      "name": "統一龍馬基金",
+      "company": "統一投信",
+      "nav_date": "07/09",
+      "r1m": 1.56,
+      "r3m": 43.62,
+      "r6m": 118.57,
+      "r1y": 235.4,
+      "r3y": 358.85,
+      "r5y": 369.89,
+      "category": "一般股票",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 0.11,
+      "rank": 18
     }
   ],
   "top_third": [
@@ -116,7 +337,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 8.41,
+      "excess": 12.09,
       "rank": 2,
       "beat_market": true
     },
@@ -134,7 +355,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 8.37,
+      "excess": 12.05,
       "rank": 3,
       "beat_market": true
     },
@@ -152,7 +373,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 8.36,
+      "excess": 12.04,
       "rank": 4,
       "beat_market": true
     },
@@ -170,7 +391,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 8.36,
+      "excess": 12.04,
       "rank": 5,
       "beat_market": true
     },
@@ -188,7 +409,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 9.37,
+      "excess": 13.05,
       "rank": 1,
       "beat_market": true
     },
@@ -302,7 +523,9 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 0.7,
+      "rank": 14,
+      "beat_market": true
     },
     {
       "code": "ACFH15",
@@ -318,7 +541,9 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 0.62,
+      "rank": 15,
+      "beat_market": true
     },
     {
       "code": "ACFH01",
@@ -350,7 +575,9 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 2.24,
+      "rank": 9,
+      "beat_market": true
     },
     {
       "code": "ACCS07",
@@ -414,7 +641,9 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 1.94,
+      "rank": 12,
+      "beat_market": true
     },
     {
       "code": "ACNB01",
@@ -430,7 +659,9 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 1.95,
+      "rank": 10,
+      "beat_market": true
     },
     {
       "code": "ACNB46",
@@ -446,7 +677,9 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 1.95,
+      "rank": 11,
+      "beat_market": true
     },
     {
       "code": "ACNB45",
@@ -462,7 +695,9 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 1.94,
+      "rank": 13,
+      "beat_market": true
     },
     {
       "code": "ACPS03",
@@ -478,7 +713,9 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 0.11,
+      "rank": 18,
+      "beat_market": true
     },
     {
       "code": "ACCS02",
@@ -526,7 +763,9 @@
       "category": "科技類",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 2.37,
+      "rank": 8,
+      "beat_market": true
     },
     {
       "code": "ACFH121",
@@ -558,7 +797,9 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 2.92,
+      "rank": 6,
+      "beat_market": true
     },
     {
       "code": "ACTS115",
@@ -574,7 +815,9 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 2.49,
+      "rank": 7,
+      "beat_market": true
     },
     {
       "code": "ACII148",
@@ -654,7 +897,9 @@
       "category": "主動式ETF",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 0.16,
+      "rank": 16,
+      "beat_market": true
     },
     {
       "code": "ACCP03",
@@ -1310,7 +1555,9 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 0.12,
+      "rank": 17,
+      "beat_market": true
     },
     {
       "code": "ACTS131",
