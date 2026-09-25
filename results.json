@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-25 02:13",
+  "generated_at": "2026-09-26 02:14",
   "benchmark": {
-    "r1m": 7.58,
-    "r3m": 4.59,
-    "as_of": "2026-09-23"
+    "r1m": 6.32,
+    "r3m": 3.83,
+    "as_of": "2026-09-24"
   },
   "benchmark_missing": false,
   "universe_size": 273,
@@ -29,7 +29,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 6.97,
+      "excess": 8.23,
       "rank": 1
     },
     {
@@ -46,7 +46,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 6.92,
+      "excess": 8.18,
       "rank": 2
     },
     {
@@ -63,7 +63,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 5.82,
+      "excess": 7.08,
       "rank": 3
     },
     {
@@ -80,7 +80,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 5.67,
+      "excess": 6.93,
       "rank": 4
     },
     {
@@ -97,7 +97,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 5.59,
+      "excess": 6.85,
       "rank": 5
     },
     {
@@ -114,7 +114,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 5.58,
+      "excess": 6.84,
       "rank": 6
     },
     {
@@ -131,7 +131,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 5.51,
+      "excess": 6.77,
       "rank": 7
     },
     {
@@ -148,7 +148,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 5.21,
+      "excess": 6.47,
       "rank": 8
     },
     {
@@ -165,7 +165,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 4.9,
+      "excess": 6.16,
       "rank": 9
     },
     {
@@ -182,7 +182,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 4.1,
+      "excess": 5.36,
       "rank": 10
     },
     {
@@ -199,7 +199,7 @@
       "category": "科技類",
       "group": "國內股票",
       "pick": true,
-      "excess": 4.08,
+      "excess": 5.34,
       "rank": 11
     },
     {
@@ -216,7 +216,7 @@
       "category": "中小型",
       "group": "國內股票",
       "pick": true,
-      "excess": 3.69,
+      "excess": 4.95,
       "rank": 12
     },
     {
@@ -233,7 +233,7 @@
       "category": "主動式ETF",
       "group": "國內股票",
       "pick": true,
-      "excess": 3.6,
+      "excess": 4.86,
       "rank": 13
     },
     {
@@ -250,7 +250,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 3.58,
+      "excess": 4.84,
       "rank": 14
     },
     {
@@ -267,7 +267,7 @@
       "category": "中小型",
       "group": "國內股票",
       "pick": true,
-      "excess": 3.48,
+      "excess": 4.74,
       "rank": 15
     },
     {
@@ -284,7 +284,7 @@
       "category": "國內平衡",
       "group": "平衡型",
       "pick": true,
-      "excess": 3.45,
+      "excess": 4.71,
       "rank": 16
     },
     {
@@ -301,7 +301,7 @@
       "category": "國內平衡",
       "group": "平衡型",
       "pick": true,
-      "excess": 3.45,
+      "excess": 4.71,
       "rank": 17
     },
     {
@@ -318,7 +318,7 @@
       "category": "中小型",
       "group": "國內股票",
       "pick": true,
-      "excess": 3.4,
+      "excess": 4.66,
       "rank": 18
     },
     {
@@ -335,7 +335,7 @@
       "category": "中國大陸",
       "group": "國內股票",
       "pick": true,
-      "excess": 3.21,
+      "excess": 4.47,
       "rank": 19
     },
     {
@@ -352,7 +352,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 3.08,
+      "excess": 4.34,
       "rank": 20
     },
     {
@@ -369,7 +369,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 3.03,
+      "excess": 4.29,
       "rank": 21
     },
     {
@@ -386,7 +386,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.97,
+      "excess": 4.23,
       "rank": 22
     },
     {
@@ -403,7 +403,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.86,
+      "excess": 4.12,
       "rank": 23
     },
     {
@@ -420,7 +420,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.51,
+      "excess": 3.77,
       "rank": 24
     },
     {
@@ -437,7 +437,7 @@
       "category": "中國大陸",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.47,
+      "excess": 3.73,
       "rank": 25
     },
     {
@@ -454,7 +454,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.3,
+      "excess": 3.56,
       "rank": 26
     },
     {
@@ -471,7 +471,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.29,
+      "excess": 3.55,
       "rank": 27
     },
     {
@@ -488,7 +488,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.28,
+      "excess": 3.54,
       "rank": 28
     },
     {
@@ -505,7 +505,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.18,
+      "excess": 3.44,
       "rank": 29
     },
     {
@@ -522,7 +522,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.15,
+      "excess": 3.41,
       "rank": 30
     },
     {
@@ -539,7 +539,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.14,
+      "excess": 3.4,
       "rank": 31
     },
     {
@@ -556,7 +556,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.13,
+      "excess": 3.39,
       "rank": 32
     },
     {
@@ -573,7 +573,7 @@
       "category": "主動式ETF",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.06,
+      "excess": 3.32,
       "rank": 33
     },
     {
@@ -590,7 +590,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 1.98,
+      "excess": 3.24,
       "rank": 34
     },
     {
@@ -607,7 +607,7 @@
       "category": "主動式ETF",
       "group": "國內股票",
       "pick": true,
-      "excess": 1.95,
+      "excess": 3.21,
       "rank": 35
     },
     {
@@ -624,7 +624,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 1.92,
+      "excess": 3.18,
       "rank": 36
     },
     {
@@ -641,7 +641,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 1.88,
+      "excess": 3.14,
       "rank": 37
     },
     {
@@ -658,7 +658,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 1.87,
+      "excess": 3.13,
       "rank": 38
     },
     {
@@ -675,7 +675,7 @@
       "category": "國內平衡",
       "group": "平衡型",
       "pick": true,
-      "excess": 1.23,
+      "excess": 2.49,
       "rank": 39
     },
     {
@@ -692,7 +692,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 1.1,
+      "excess": 2.36,
       "rank": 40
     },
     {
@@ -709,7 +709,7 @@
       "category": "主動式ETF",
       "group": "國內股票",
       "pick": true,
-      "excess": 1.1,
+      "excess": 2.36,
       "rank": 41
     },
     {
@@ -726,7 +726,7 @@
       "category": "科技類",
       "group": "國內股票",
       "pick": true,
-      "excess": 1.0,
+      "excess": 2.26,
       "rank": 42
     },
     {
@@ -743,7 +743,7 @@
       "category": "國內平衡",
       "group": "平衡型",
       "pick": true,
-      "excess": 0.99,
+      "excess": 2.25,
       "rank": 43
     },
     {
@@ -760,7 +760,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.98,
+      "excess": 2.24,
       "rank": 44
     },
     {
@@ -777,7 +777,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.77,
+      "excess": 2.03,
       "rank": 45
     },
     {
@@ -794,7 +794,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.72,
+      "excess": 1.98,
       "rank": 46
     },
     {
@@ -811,7 +811,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.68,
+      "excess": 1.94,
       "rank": 47
     },
     {
@@ -828,7 +828,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.66,
+      "excess": 1.92,
       "rank": 48
     },
     {
@@ -845,7 +845,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.63,
+      "excess": 1.89,
       "rank": 49
     },
     {
@@ -862,7 +862,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.6,
+      "excess": 1.86,
       "rank": 50
     },
     {
@@ -879,7 +879,7 @@
       "category": "科技類",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.3,
+      "excess": 1.56,
       "rank": 51
     },
     {
@@ -896,7 +896,7 @@
       "category": "科技類",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.28,
+      "excess": 1.54,
       "rank": 52
     },
     {
@@ -913,7 +913,7 @@
       "category": "平衡王",
       "group": "平衡型",
       "pick": true,
-      "excess": 0.26,
+      "excess": 1.52,
       "rank": 53
     },
     {
@@ -930,7 +930,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.04,
+      "excess": 1.3,
       "rank": 54
     },
     {
@@ -947,8 +947,195 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.02,
+      "excess": 1.28,
       "rank": 55
+    },
+    {
+      "code": "ACKH03",
+      "name": "野村台灣運籌基金",
+      "company": "野村投信",
+      "nav_date": "09/24",
+      "r1m": 7.45,
+      "r3m": 6.55,
+      "r6m": 62.28,
+      "r1y": 180.53,
+      "r3y": 409.21,
+      "r5y": 536.7,
+      "category": "一般股票",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 1.13,
+      "rank": 56
+    },
+    {
+      "code": "ACCS09",
+      "name": "景順主流基金",
+      "company": "景順投信",
+      "nav_date": "09/24",
+      "r1m": 7.4,
+      "r3m": 8.16,
+      "r6m": 58.43,
+      "r1y": 97.31,
+      "r3y": 201.92,
+      "r5y": 221.75,
+      "category": "一般股票",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 1.08,
+      "rank": 57
+    },
+    {
+      "code": "AC0001",
+      "name": "野村鴻運基金",
+      "company": "野村投信",
+      "nav_date": "09/24",
+      "r1m": 7.14,
+      "r3m": 9.8,
+      "r6m": 66.35,
+      "r1y": 187.6,
+      "r3y": 419.61,
+      "r5y": 581.99,
+      "category": "一般股票",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 0.82,
+      "rank": 58
+    },
+    {
+      "code": "ACCP03",
+      "name": "瀚亞高科技基金",
+      "company": "瀚亞投信",
+      "nav_date": "09/24",
+      "r1m": 7.1,
+      "r3m": 6.74,
+      "r6m": 79.2,
+      "r1y": 140.49,
+      "r3y": 351.52,
+      "r5y": 428.54,
+      "category": "科技類",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 0.78,
+      "rank": 59
+    },
+    {
+      "code": "ACKH174",
+      "name": "野村中小基金-累積S類型(台幣)",
+      "company": "野村投信",
+      "nav_date": "09/24",
+      "r1m": 7.02,
+      "r3m": 9.88,
+      "r6m": 69.73,
+      "r1y": 186.04,
+      "r3y": 378.55,
+      "r5y": 566.35,
+      "category": "中小型",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 0.7,
+      "rank": 60
+    },
+    {
+      "code": "ACIC08",
+      "name": "野村中小基金-累積型(台幣)",
+      "company": "野村投信",
+      "nav_date": "09/24",
+      "r1m": 6.92,
+      "r3m": 9.57,
+      "r6m": 68.79,
+      "r1y": 182.91,
+      "r3y": 362.94,
+      "r5y": 487.86,
+      "category": "中小型",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 0.6,
+      "rank": 61
+    },
+    {
+      "code": "ACTT252",
+      "name": "台新高股息平衡基金-TISA類型(本基金並無保證收益及配息)",
+      "company": "台新投信",
+      "nav_date": "09/24",
+      "r1m": 6.51,
+      "r3m": 4.08,
+      "r6m": null,
+      "r1y": null,
+      "r3y": null,
+      "r5y": null,
+      "category": "國內平衡",
+      "group": "平衡型",
+      "pick": true,
+      "excess": 0.19,
+      "rank": 62
+    },
+    {
+      "code": "ACTT116",
+      "name": "台新高股息平衡基金-NA不配息(本基金並無保證收益及配息)",
+      "company": "台新投信",
+      "nav_date": "09/24",
+      "r1m": 6.46,
+      "r3m": 4.18,
+      "r6m": 37.41,
+      "r1y": 43.42,
+      "r3y": 120.33,
+      "r5y": 186.79,
+      "category": "國內平衡",
+      "group": "平衡型",
+      "pick": true,
+      "excess": 0.14,
+      "rank": 63
+    },
+    {
+      "code": "ACTT03",
+      "name": "台新高股息平衡基金-A不配息(本基金並無保證收益及配息)",
+      "company": "台新投信",
+      "nav_date": "09/24",
+      "r1m": 6.46,
+      "r3m": 4.18,
+      "r6m": 37.41,
+      "r1y": 43.42,
+      "r3y": 120.34,
+      "r5y": 186.79,
+      "category": "國內平衡",
+      "group": "平衡型",
+      "pick": true,
+      "excess": 0.14,
+      "rank": 64
+    },
+    {
+      "code": "ACTT117",
+      "name": "台新高股息平衡基金-NB配息(本基金並無保證收益及配息)",
+      "company": "台新投信",
+      "nav_date": "09/24",
+      "r1m": 6.45,
+      "r3m": 4.18,
+      "r6m": 37.44,
+      "r1y": 43.42,
+      "r3y": 120.44,
+      "r5y": 186.96,
+      "category": "國內平衡",
+      "group": "平衡型",
+      "pick": true,
+      "excess": 0.13,
+      "rank": 65
+    },
+    {
+      "code": "ACTT0301",
+      "name": "台新高股息平衡基金-B配息(本基金並無保證收益及配息)",
+      "company": "台新投信",
+      "nav_date": "09/24",
+      "r1m": 6.45,
+      "r3m": 4.18,
+      "r6m": 37.44,
+      "r1y": 43.42,
+      "r3y": 120.44,
+      "r5y": 186.96,
+      "category": "國內平衡",
+      "group": "平衡型",
+      "pick": true,
+      "excess": 0.13,
+      "rank": 66
     }
   ],
   "top_third": [
@@ -966,7 +1153,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 6.92,
+      "excess": 8.18,
       "rank": 2,
       "beat_market": true
     },
@@ -1048,7 +1235,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 4.1,
+      "excess": 5.36,
       "rank": 10,
       "beat_market": true
     },
@@ -1066,7 +1253,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.18,
+      "excess": 3.44,
       "rank": 29,
       "beat_market": true
     },
@@ -1084,7 +1271,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.13,
+      "excess": 3.39,
       "rank": 32,
       "beat_market": true
     },
@@ -1102,7 +1289,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.15,
+      "excess": 3.41,
       "rank": 30,
       "beat_market": true
     },
@@ -1120,7 +1307,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.14,
+      "excess": 3.4,
       "rank": 31,
       "beat_market": true
     },
@@ -1138,7 +1325,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 5.67,
+      "excess": 6.93,
       "rank": 4,
       "beat_market": true
     },
@@ -1156,7 +1343,9 @@
       "category": "中小型",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 0.7,
+      "rank": 60,
+      "beat_market": true
     },
     {
       "code": "AC0001",
@@ -1172,7 +1361,9 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 0.82,
+      "rank": 58,
+      "beat_market": true
     },
     {
       "code": "ACCJ83",
@@ -1188,7 +1379,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 5.59,
+      "excess": 6.85,
       "rank": 5,
       "beat_market": true
     },
@@ -1206,7 +1397,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 5.58,
+      "excess": 6.84,
       "rank": 6,
       "beat_market": true
     },
@@ -1224,7 +1415,7 @@
       "category": "中小型",
       "group": "國內股票",
       "pick": true,
-      "excess": 3.48,
+      "excess": 4.74,
       "rank": 15,
       "beat_market": true
     },
@@ -1242,7 +1433,9 @@
       "category": "中小型",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 0.6,
+      "rank": 61,
+      "beat_market": true
     },
     {
       "code": "ACCI12",
@@ -1258,7 +1451,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 5.51,
+      "excess": 6.77,
       "rank": 7,
       "beat_market": true
     },
@@ -1276,7 +1469,7 @@
       "category": "科技類",
       "group": "國內股票",
       "pick": true,
-      "excess": 4.08,
+      "excess": 5.34,
       "rank": 11,
       "beat_market": true
     },
@@ -1294,7 +1487,7 @@
       "category": "中小型",
       "group": "國內股票",
       "pick": true,
-      "excess": 3.4,
+      "excess": 4.66,
       "rank": 18,
       "beat_market": true
     },
@@ -1312,7 +1505,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 1.1,
+      "excess": 2.36,
       "rank": 40,
       "beat_market": true
     },
@@ -1330,7 +1523,7 @@
       "category": "科技類",
       "group": "國內股票",
       "pick": true,
-      "excess": 1.0,
+      "excess": 2.26,
       "rank": 42,
       "beat_market": true
     },
@@ -1364,7 +1557,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.98,
+      "excess": 2.24,
       "rank": 44,
       "beat_market": true
     },
@@ -1398,7 +1591,7 @@
       "category": "主動式ETF",
       "group": "國內股票",
       "pick": true,
-      "excess": 3.6,
+      "excess": 4.86,
       "rank": 13,
       "beat_market": true
     },
@@ -1416,7 +1609,9 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 1.08,
+      "rank": 57,
+      "beat_market": true
     },
     {
       "code": "ACKH07",
@@ -1464,7 +1659,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.04,
+      "excess": 1.3,
       "rank": 54,
       "beat_market": true
     },
@@ -1498,7 +1693,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.02,
+      "excess": 1.28,
       "rank": 55,
       "beat_market": true
     },
@@ -1516,7 +1711,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 5.21,
+      "excess": 6.47,
       "rank": 8,
       "beat_market": true
     },
@@ -1566,7 +1761,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.66,
+      "excess": 1.92,
       "rank": 48,
       "beat_market": true
     },
@@ -1584,7 +1779,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 3.58,
+      "excess": 4.84,
       "rank": 14,
       "beat_market": true
     },
@@ -1602,7 +1797,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.6,
+      "excess": 1.86,
       "rank": 50,
       "beat_market": true
     },
@@ -1620,7 +1815,7 @@
       "category": "國內平衡",
       "group": "平衡型",
       "pick": true,
-      "excess": 3.45,
+      "excess": 4.71,
       "rank": 16,
       "beat_market": true
     },
@@ -1638,7 +1833,7 @@
       "category": "國內平衡",
       "group": "平衡型",
       "pick": true,
-      "excess": 3.45,
+      "excess": 4.71,
       "rank": 17,
       "beat_market": true
     },
@@ -1656,7 +1851,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 3.03,
+      "excess": 4.29,
       "rank": 21,
       "beat_market": true
     },
@@ -1674,7 +1869,9 @@
       "category": "科技類",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 0.78,
+      "rank": 59,
+      "beat_market": true
     },
     {
       "code": "ACCY190",
@@ -1690,7 +1887,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.3,
+      "excess": 3.56,
       "rank": 26,
       "beat_market": true
     },
@@ -1708,7 +1905,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.29,
+      "excess": 3.55,
       "rank": 27,
       "beat_market": true
     },
@@ -1726,7 +1923,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.28,
+      "excess": 3.54,
       "rank": 28,
       "beat_market": true
     },
@@ -1760,7 +1957,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.97,
+      "excess": 4.23,
       "rank": 22,
       "beat_market": true
     },
@@ -1778,7 +1975,9 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 1.13,
+      "rank": 56,
+      "beat_market": true
     },
     {
       "code": "ACCI03",
@@ -1794,7 +1993,7 @@
       "category": "國內平衡",
       "group": "平衡型",
       "pick": true,
-      "excess": 0.99,
+      "excess": 2.25,
       "rank": 43,
       "beat_market": true
     },
@@ -1828,7 +2027,7 @@
       "category": "主動式ETF",
       "group": "國內股票",
       "pick": true,
-      "excess": 1.1,
+      "excess": 2.36,
       "rank": 41,
       "beat_market": true
     },
@@ -1878,7 +2077,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 1.88,
+      "excess": 3.14,
       "rank": 37,
       "beat_market": true
     },
@@ -1912,7 +2111,7 @@
       "category": "主動式ETF",
       "group": "國內股票",
       "pick": true,
-      "excess": 1.95,
+      "excess": 3.21,
       "rank": 35,
       "beat_market": true
     },
@@ -1930,7 +2129,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 4.9,
+      "excess": 6.16,
       "rank": 9,
       "beat_market": true
     },
@@ -1948,7 +2147,7 @@
       "category": "中國大陸",
       "group": "國內股票",
       "pick": true,
-      "excess": 3.21,
+      "excess": 4.47,
       "rank": 19,
       "beat_market": true
     },
@@ -1966,7 +2165,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.86,
+      "excess": 4.12,
       "rank": 23,
       "beat_market": true
     },
@@ -1984,7 +2183,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 6.97,
+      "excess": 8.23,
       "rank": 1,
       "beat_market": true
     },
@@ -2002,7 +2201,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 1.87,
+      "excess": 3.13,
       "rank": 38,
       "beat_market": true
     },
@@ -2100,7 +2299,7 @@
       "category": "平衡王",
       "group": "平衡型",
       "pick": true,
-      "excess": 0.26,
+      "excess": 1.52,
       "rank": 53,
       "beat_market": true
     },
@@ -2118,7 +2317,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 5.82,
+      "excess": 7.08,
       "rank": 3,
       "beat_market": true
     },
@@ -2152,7 +2351,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 3.08,
+      "excess": 4.34,
       "rank": 20,
       "beat_market": true
     },
@@ -2170,7 +2369,9 @@
       "category": "國內平衡",
       "group": "平衡型",
       "pick": true,
-      "beat_market": false
+      "excess": 0.13,
+      "rank": 65,
+      "beat_market": true
     },
     {
       "code": "ACTT0301",
@@ -2186,7 +2387,9 @@
       "category": "國內平衡",
       "group": "平衡型",
       "pick": true,
-      "beat_market": false
+      "excess": 0.13,
+      "rank": 66,
+      "beat_market": true
     },
     {
       "code": "ACTT116",
@@ -2202,7 +2405,9 @@
       "category": "國內平衡",
       "group": "平衡型",
       "pick": true,
-      "beat_market": false
+      "excess": 0.14,
+      "rank": 63,
+      "beat_market": true
     },
     {
       "code": "ACTT03",
@@ -2218,7 +2423,9 @@
       "category": "國內平衡",
       "group": "平衡型",
       "pick": true,
-      "beat_market": false
+      "excess": 0.14,
+      "rank": 64,
+      "beat_market": true
     },
     {
       "code": "ACFP129",
@@ -2266,7 +2473,9 @@
       "category": "國內平衡",
       "group": "平衡型",
       "pick": true,
-      "beat_market": false
+      "excess": 0.19,
+      "rank": 62,
+      "beat_market": true
     },
     {
       "code": "ACAI480",
@@ -2282,7 +2491,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.77,
+      "excess": 2.03,
       "rank": 45,
       "beat_market": true
     },
@@ -2300,7 +2509,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.72,
+      "excess": 1.98,
       "rank": 46,
       "beat_market": true
     },
@@ -2318,7 +2527,7 @@
       "category": "主動式ETF",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.06,
+      "excess": 3.32,
       "rank": 33,
       "beat_market": true
     },
@@ -2336,7 +2545,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.68,
+      "excess": 1.94,
       "rank": 47,
       "beat_market": true
     },
@@ -2354,7 +2563,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.63,
+      "excess": 1.89,
       "rank": 49,
       "beat_market": true
     },
@@ -2388,7 +2597,7 @@
       "category": "國內平衡",
       "group": "平衡型",
       "pick": true,
-      "excess": 1.23,
+      "excess": 2.49,
       "rank": 39,
       "beat_market": true
     },
@@ -2406,7 +2615,7 @@
       "category": "科技類",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.3,
+      "excess": 1.56,
       "rank": 51,
       "beat_market": true
     },
@@ -2424,7 +2633,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 1.98,
+      "excess": 3.24,
       "rank": 34,
       "beat_market": true
     },
@@ -2442,7 +2651,7 @@
       "category": "科技類",
       "group": "國內股票",
       "pick": true,
-      "excess": 0.28,
+      "excess": 1.54,
       "rank": 52,
       "beat_market": true
     },
@@ -2460,7 +2669,7 @@
       "category": "中小型",
       "group": "國內股票",
       "pick": true,
-      "excess": 3.69,
+      "excess": 4.95,
       "rank": 12,
       "beat_market": true
     },
@@ -2478,7 +2687,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 1.92,
+      "excess": 3.18,
       "rank": 36,
       "beat_market": true
     },
@@ -2496,7 +2705,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.51,
+      "excess": 3.77,
       "rank": 24,
       "beat_market": true
     },
@@ -2514,7 +2723,7 @@
       "category": "中國大陸",
       "group": "國內股票",
       "pick": true,
-      "excess": 2.47,
+      "excess": 3.73,
       "rank": 25,
       "beat_market": true
     }
