@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-31 02:59",
+  "generated_at": "2026-11-01 02:12",
   "benchmark": {
-    "r1m": -2.65,
-    "r3m": 16.11,
-    "as_of": "2026-10-29"
+    "r1m": -5.69,
+    "r3m": 4.85,
+    "as_of": "2026-10-30"
   },
   "benchmark_missing": false,
   "universe_size": 280,
@@ -29,8 +29,59 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 17.15,
+      "excess": 20.19,
       "rank": 1
+    },
+    {
+      "code": "ACJS06",
+      "name": "富邦精選五虎基金",
+      "company": "富邦投信",
+      "nav_date": "10/30",
+      "r1m": -4.33,
+      "r3m": 35.1,
+      "r6m": 17.17,
+      "r1y": 110.21,
+      "r3y": 185.54,
+      "r5y": 212.71,
+      "category": "一般股票",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 1.36,
+      "rank": 2
+    },
+    {
+      "code": "ACII85",
+      "name": "兆豐台灣金傳精選股息基金A累積型(台幣)(本基金並無保證收益及配息)",
+      "company": "兆豐投信",
+      "nav_date": "10/30",
+      "r1m": -4.44,
+      "r3m": 26.0,
+      "r6m": 14.1,
+      "r1y": 75.61,
+      "r3y": 113.76,
+      "r5y": 95.6,
+      "category": "一般股票",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 1.25,
+      "rank": 3
+    },
+    {
+      "code": "ACII86",
+      "name": "兆豐台灣金傳精選股息基金N後收型(台幣)(本基金並無保證收益及配息)",
+      "company": "兆豐投信",
+      "nav_date": "10/30",
+      "r1m": -4.49,
+      "r3m": 26.0,
+      "r6m": 14.04,
+      "r1y": 75.45,
+      "r3y": 113.76,
+      "r5y": 95.6,
+      "category": "一般股票",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 1.2,
+      "rank": 4
     }
   ],
   "top_third": [
@@ -48,7 +99,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 17.15,
+      "excess": 20.19,
       "rank": 1,
       "beat_market": true
     },
@@ -66,7 +117,9 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 1.36,
+      "rank": 2,
+      "beat_market": true
     },
     {
       "code": "ACCJ84",
@@ -354,7 +407,9 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 1.25,
+      "rank": 3,
+      "beat_market": true
     },
     {
       "code": "ACII86",
@@ -370,7 +425,9 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 1.2,
+      "rank": 4,
+      "beat_market": true
     },
     {
       "code": "ACJS13",
