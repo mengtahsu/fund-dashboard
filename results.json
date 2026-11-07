@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-07 04:15",
+  "generated_at": "2026-11-08 02:28",
   "benchmark": {
-    "r1m": -16.55,
-    "r3m": -6.36,
-    "as_of": "2026-11-05"
+    "r1m": -20.29,
+    "r3m": -10.23,
+    "as_of": "2026-11-06"
   },
   "benchmark_missing": false,
   "universe_size": 280,
@@ -29,7 +29,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 31.05,
+      "excess": 34.79,
       "rank": 1
     },
     {
@@ -46,7 +46,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 20.71,
+      "excess": 24.45,
       "rank": 2
     },
     {
@@ -63,7 +63,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 16.55,
+      "excess": 20.29,
       "rank": 3
     },
     {
@@ -80,7 +80,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 16.55,
+      "excess": 20.29,
       "rank": 4
     },
     {
@@ -97,7 +97,7 @@
       "category": "中小型",
       "group": "國內股票",
       "pick": true,
-      "excess": 5.87,
+      "excess": 9.61,
       "rank": 5
     },
     {
@@ -114,7 +114,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 5.83,
+      "excess": 9.57,
       "rank": 6
     },
     {
@@ -131,7 +131,7 @@
       "category": "國內平衡",
       "group": "平衡型",
       "pick": true,
-      "excess": 5.29,
+      "excess": 9.03,
       "rank": 7
     },
     {
@@ -148,8 +148,178 @@
       "category": "國內平衡",
       "group": "平衡型",
       "pick": true,
-      "excess": 5.27,
+      "excess": 9.01,
       "rank": 8
+    },
+    {
+      "code": "ACKH305",
+      "name": "野村台灣高股息基金-TISA類型(台幣)(本基金之配息來源可能為本金且並無保證收益及配息)",
+      "company": "野村投信",
+      "nav_date": "11/06",
+      "r1m": -17.06,
+      "r3m": -8.46,
+      "r6m": 6.31,
+      "r1y": 45.25,
+      "r3y": null,
+      "r5y": null,
+      "category": "高股息",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 3.23,
+      "rank": 9
+    },
+    {
+      "code": "ACKH261",
+      "name": "野村台灣高股息基金-累積S類型(台幣)(本基金之配息來源可能為本金且並無保證收益及配息)",
+      "company": "野村投信",
+      "nav_date": "11/06",
+      "r1m": -17.1,
+      "r3m": -8.57,
+      "r6m": 6.06,
+      "r1y": 44.67,
+      "r3y": null,
+      "r5y": null,
+      "category": "高股息",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 3.19,
+      "rank": 10
+    },
+    {
+      "code": "ACKH29",
+      "name": "野村台灣高股息基金-累積型(台幣)(本基金之配息來源可能為本金且並無保證收益及配息)",
+      "company": "野村投信",
+      "nav_date": "11/06",
+      "r1m": -17.14,
+      "r3m": -8.72,
+      "r6m": 5.73,
+      "r1y": 43.78,
+      "r3y": 150.05,
+      "r5y": 212.86,
+      "category": "高股息",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 3.15,
+      "rank": 11
+    },
+    {
+      "code": "ACKH2901",
+      "name": "野村台灣高股息基金-月配型(台幣)(本基金之配息來源可能為本金且並無保證收益及配息)",
+      "company": "野村投信",
+      "nav_date": "11/06",
+      "r1m": -17.34,
+      "r3m": -8.94,
+      "r6m": 5.45,
+      "r1y": 43.36,
+      "r3y": null,
+      "r5y": null,
+      "category": "高股息",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 2.95,
+      "rank": 12
+    },
+    {
+      "code": "ACTT219",
+      "name": "台新臺灣AI優息動能ETF基金(基金之配息來源可能為收益平準金且並無保證收益及配息)",
+      "company": "台新投信",
+      "nav_date": "11/06",
+      "r1m": -18.0,
+      "r3m": -14.35,
+      "r6m": -1.36,
+      "r1y": 17.06,
+      "r3y": null,
+      "r5y": null,
+      "category": "科技類",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 2.29,
+      "rank": 13
+    },
+    {
+      "code": "ACML1401",
+      "name": "玉山金平衡基金-R累積型(本基金有相當比重投資於非投資等級之高風險債券)",
+      "company": "玉山投信",
+      "nav_date": "11/06",
+      "r1m": -18.07,
+      "r3m": -10.12,
+      "r6m": -11.09,
+      "r1y": 27.35,
+      "r3y": 89.38,
+      "r5y": 93.61,
+      "category": "平衡王",
+      "group": "平衡型",
+      "pick": true,
+      "excess": 2.22,
+      "rank": 14
+    },
+    {
+      "code": "ACML14",
+      "name": "玉山金平衡基金-A累積型(本基金有相當比重投資於非投資等級之高風險債券)",
+      "company": "玉山投信",
+      "nav_date": "11/06",
+      "r1m": -18.09,
+      "r3m": -10.18,
+      "r6m": -11.2,
+      "r1y": 27.03,
+      "r3y": 88.25,
+      "r5y": 91.59,
+      "category": "平衡王",
+      "group": "平衡型",
+      "pick": true,
+      "excess": 2.2,
+      "rank": 15
+    },
+    {
+      "code": "ACDD158",
+      "name": "安聯台灣高息成長主動式ETF基金(本基金之配息來源可能為收益平準金且基金並無保證收益及配息)",
+      "company": "安聯投信",
+      "nav_date": "11/06",
+      "r1m": -19.25,
+      "r3m": -12.47,
+      "r6m": -8.34,
+      "r1y": 30.57,
+      "r3y": null,
+      "r5y": null,
+      "category": "主動式ETF",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 1.04,
+      "rank": 16
+    },
+    {
+      "code": "ACII86",
+      "name": "兆豐台灣金傳精選股息基金N後收型(台幣)(本基金並無保證收益及配息)",
+      "company": "兆豐投信",
+      "nav_date": "11/06",
+      "r1m": -19.37,
+      "r3m": -5.38,
+      "r6m": -1.26,
+      "r1y": 52.07,
+      "r3y": 82.33,
+      "r5y": 71.61,
+      "category": "一般股票",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 0.92,
+      "rank": 17
+    },
+    {
+      "code": "ACII85",
+      "name": "兆豐台灣金傳精選股息基金A累積型(台幣)(本基金並無保證收益及配息)",
+      "company": "兆豐投信",
+      "nav_date": "11/06",
+      "r1m": -19.38,
+      "r3m": -5.44,
+      "r6m": -1.32,
+      "r1y": 51.99,
+      "r3y": 82.22,
+      "r5y": 71.51,
+      "category": "一般股票",
+      "group": "國內股票",
+      "pick": true,
+      "excess": 0.91,
+      "rank": 18
     }
   ],
   "top_third": [
@@ -167,7 +337,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 31.05,
+      "excess": 34.79,
       "rank": 1,
       "beat_market": true
     },
@@ -185,7 +355,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 20.71,
+      "excess": 24.45,
       "rank": 2,
       "beat_market": true
     },
@@ -203,7 +373,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 16.55,
+      "excess": 20.29,
       "rank": 3,
       "beat_market": true
     },
@@ -221,7 +391,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 16.55,
+      "excess": 20.29,
       "rank": 4,
       "beat_market": true
     },
@@ -239,7 +409,7 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "excess": 5.83,
+      "excess": 9.57,
       "rank": 6,
       "beat_market": true
     },
@@ -257,7 +427,7 @@
       "category": "國內平衡",
       "group": "平衡型",
       "pick": true,
-      "excess": 5.29,
+      "excess": 9.03,
       "rank": 7,
       "beat_market": true
     },
@@ -275,7 +445,7 @@
       "category": "國內平衡",
       "group": "平衡型",
       "pick": true,
-      "excess": 5.27,
+      "excess": 9.01,
       "rank": 8,
       "beat_market": true
     },
@@ -293,7 +463,9 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 0.92,
+      "rank": 17,
+      "beat_market": true
     },
     {
       "code": "ACII85",
@@ -309,7 +481,9 @@
       "category": "一般股票",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 0.91,
+      "rank": 18,
+      "beat_market": true
     },
     {
       "code": "ACKH305",
@@ -325,7 +499,9 @@
       "category": "高股息",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 3.23,
+      "rank": 9,
+      "beat_market": true
     },
     {
       "code": "ACKH261",
@@ -341,7 +517,9 @@
       "category": "高股息",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 3.19,
+      "rank": 10,
+      "beat_market": true
     },
     {
       "code": "ACKH29",
@@ -357,7 +535,9 @@
       "category": "高股息",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 3.15,
+      "rank": 11,
+      "beat_market": true
     },
     {
       "code": "ACKH2901",
@@ -373,7 +553,9 @@
       "category": "高股息",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 2.95,
+      "rank": 12,
+      "beat_market": true
     },
     {
       "code": "ACTT179",
@@ -389,7 +571,7 @@
       "category": "中小型",
       "group": "國內股票",
       "pick": true,
-      "excess": 5.87,
+      "excess": 9.61,
       "rank": 5,
       "beat_market": true
     },
@@ -407,7 +589,9 @@
       "category": "平衡王",
       "group": "平衡型",
       "pick": true,
-      "beat_market": false
+      "excess": 2.22,
+      "rank": 14,
+      "beat_market": true
     },
     {
       "code": "ACML14",
@@ -423,7 +607,9 @@
       "category": "平衡王",
       "group": "平衡型",
       "pick": true,
-      "beat_market": false
+      "excess": 2.2,
+      "rank": 15,
+      "beat_market": true
     },
     {
       "code": "ACJS06",
@@ -487,7 +673,9 @@
       "category": "主動式ETF",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 1.04,
+      "rank": 16,
+      "beat_market": true
     },
     {
       "code": "ACJF51",
@@ -679,7 +867,9 @@
       "category": "科技類",
       "group": "國內股票",
       "pick": true,
-      "beat_market": false
+      "excess": 2.29,
+      "rank": 13,
+      "beat_market": true
     },
     {
       "code": "ACAP247",
